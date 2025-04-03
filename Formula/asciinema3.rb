@@ -10,7 +10,7 @@ class Asciinema3 < Formula
 
   def install
     system "cargo", "install", *std_cargo_args
-    
+
     # Manually copy the binary to the bin directory and name it "asciinema3"
     # You might think that you could do `bin.install "target/release/asciinema" => "asciinema3"`
     # however, asciinema is already installed as a binary by the cargo install command.
@@ -18,8 +18,8 @@ class Asciinema3 < Formula
     mv bin/"asciinema", bin/"asciinema3"
 
     # Tell the user this is unofficial
-    ohai "Note: This is an unofficial Homebrew formula for asciinema version #{version}." \
-          "It's been installed as asciinema3 to minimize confusion."
+    ohai "Note: This is an unofficial Homebrew formula for asciinema version #{version}. " \
+         "It's been installed as asciinema3 to minimize confusion."
   end
 
   test do
